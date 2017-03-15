@@ -1,8 +1,8 @@
 {
   "name": "oauth-passport",
   "version": "1.0.0",
-  "description": "User Authentication App",
-  "main": "index.js",
+  "description": "User authentication app",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app"
@@ -10,17 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-  	"express": "*",
-  	"body-parser":"*",
-  	"express-handlebars":"*",
-  	"express-messages":"*",
-  	"express-session":"*",
-  	"express-flash":"*",
-  	"mongoose":"*",
-  	"passport":"*",
-  	"passport-http":"*",
-  	"passport-local":"*",
-  	"passport-http":"*",
-  	"bcryptjs":"*"
+    "express":"*",
+    "body-parser":"*",
+    "express-handlebars":"*",
+    "express-messages":"*",
+    "express-session":"*",
+    "express-validator":"*",
+    "connect-flash":"*",
+    "mongoose":"*",
+    "passport":"*",
+    "passport-http":"*",
+    "passport-local":"*",
+    "bcryptjs":"*"
   }
 }
