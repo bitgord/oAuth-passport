@@ -20,6 +20,13 @@ router.get('/register', (req, res, next) => {
   res.render('register');
 });
 
+// Logout Form
+router.get('/logout', (req, res, next) => {
+  req.logout();
+  req.flash('success_msg', 'You are logged out');
+  res.redirect('/login');
+});
+
 // Process Register
 router.post('/register', (req, res, next) => {
   const name = req.body.name;
