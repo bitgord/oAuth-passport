@@ -1,5 +1,5 @@
 {
-  "name": "oauth-passport",
+  "name": "oauthapp",
   "version": "1.0.0",
   "description": "User authentication app",
   "main": "app.js",
