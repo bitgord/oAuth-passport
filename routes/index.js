@@ -5,8 +5,8 @@ const LocalStrategy = require('passport-local').Strategy;
 
 let User = require('../models/user');
 
-// Home Page
-router.get('/', (req, res, next) => {
+// Home Page - Dashboard
+router.get('/', ensureAuthenticated, (req, res, next) => {
   res.render('index');
 });
 
@@ -101,5 +101,15 @@ router.post('/login', (req, res, next) => {
     failureFlash: true
   })(req, res, next);
 });
+
+// Access Control
+function ensureAuthenticated(req, res, next){
+  if(req.isAuthenticated()){
+    return next();
+  } else {
+    res.flash('error_msg', 'You are not authorized to view that page');
+    res.redirect('/login');
+  }
+}
 
 module.exports = router;
